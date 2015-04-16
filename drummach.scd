@@ -5,8 +5,8 @@ SerialPort.listDevices;
 s.waitForBoot{
 ~ino = ArduinoSMS("/dev/tty.usbserial-AE015LPT", 9600);
 ~kbs = {Bus.control(s)}!50;
-~hits = SoundFile.collectIntoBuffers( "/Volumes/MEDIA/JAM4/DrumMachine/drsamps/"  ++ "*");
-//~hits = SoundFile.collectIntoBuffers( "/Users/jyang/Downloads/Drum Machine/drsamps/"  ++ "*");
+//~hits = SoundFile.collectIntoBuffers( "/Volumes/MEDIA/JAM4/drumMach-master/drsamps/"  ++ "*");
+~hits = SoundFile.collectIntoBuffers(  "/Users/jyang/GitHub/drumMach/drsamps/" ++ "*");
 };
 )
 (
@@ -48,7 +48,8 @@ SynthDef(\samp, {
 
 )
 
-
+~dr[0].set(\trig, 1);
+s.meter
 (
 ~dr = [
 	Synth(\samp, [\buf, ~hits[0] ]),
@@ -61,3 +62,4 @@ SynthDef(\samp, {
 ~dr[2].map(\trig, ~kbs[2]);
 ~dr[3].map(\trig, ~kbs[3]);
 )
+~kbs[0].get;

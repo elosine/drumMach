@@ -1,6 +1,6 @@
 #include <CapacitiveSensor.h>
 
-int cut = 150;
+int cut = 70;
 CapacitiveSensor   cs_4_2 = CapacitiveSensor(4, 2);
 CapacitiveSensor   cs_4_3 = CapacitiveSensor(4, 3);
 CapacitiveSensor   cs_4_5 = CapacitiveSensor(4, 5);

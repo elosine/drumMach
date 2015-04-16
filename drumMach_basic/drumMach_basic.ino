@@ -2,9 +2,9 @@
 
 int cut = 150;
 CapacitiveSensor   cs_4_2 = CapacitiveSensor(4, 2);
-CapacitiveSensor   cs_4_3 = CapacitiveSensor(4, 3);
-CapacitiveSensor   cs_4_5 = CapacitiveSensor(4, 5);
-CapacitiveSensor   cs_4_6 = CapacitiveSensor(4, 6);
+//CapacitiveSensor   cs_4_3 = CapacitiveSensor(4, 3);
+//CapacitiveSensor   cs_4_5 = CapacitiveSensor(4, 5);
+//CapacitiveSensor   cs_4_6 = CapacitiveSensor(4, 6);
 
 boolean on1 = false;
 
@@ -14,9 +14,9 @@ void setup() {
 
 void loop() {
   long val1 =  cs_4_2.capacitiveSensor(30);
-  long val2 =  cs_4_3.capacitiveSensor(30);
-  long val3 =  cs_4_5.capacitiveSensor(30);
-  long val4 =  cs_4_6.capacitiveSensor(30);
+ // long val2 =  cs_4_3.capacitiveSensor(30);
+ // long val3 =  cs_4_5.capacitiveSensor(30);
+ // long val4 =  cs_4_6.capacitiveSensor(30);
 
   if (val1 > cut) {
     if (!on1) {
